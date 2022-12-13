@@ -10,7 +10,7 @@ const Login = () => {
 
     useEffect(() => {
         navigate('/')
-    }, [localStorage, localStorage.setItem(), localStorage.getItem()])
+    }, [localStorage.setItem()])
     
 
     const loginn = async () => {
