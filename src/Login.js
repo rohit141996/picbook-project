@@ -7,13 +7,7 @@ const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [loaderrr, setLoaderrr] = useState('')
-    const [pageLoad, setPageLoad] = useState('')
-
-    useEffect(() => {
-        navigate('/')
-    }, [pageLoad])
     
-
     const loginn = async () => {
         setLoaderrr('Loading profile...please wait')
 
@@ -44,7 +38,8 @@ const Login = () => {
         //////////////////////////////////////////////////////
         if ((result1.username)) {
             localStorage.setItem('user', result2);
-            setPageLoad('asd')
+            navigate('/');
+            window.location.reload();
         } else {
             setLoaderrr('')
             localStorage.clear();
