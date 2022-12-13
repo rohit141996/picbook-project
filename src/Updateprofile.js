@@ -73,6 +73,8 @@ const Updateprofile = () => {
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ display: 'inline-block', marginRight: '10px', padding: '10px', border: '2px white solid', borderRadius: '5px' }}>
                     <center>
+                        <p style={{ margin: '0px', color: 'white' }}>(upload image below or equal to 100kb)</p>
+                        <p style={{ margin: '0px', color: 'white' }}>for compressing images, <a style={{ margin: '0px', color: 'white' }} href="https://compressjpeg.online/compress-jpeg-to-100kb" target="_blank" rel="noopener noreferrer">Click Here</a></p><br/>
                         <input type="file" name='profilepic' onChange={(e) => setProfilePic(e.target.files[0])} style={{ width: '200px', backgroundColor: 'white' }} /><br />
                         <button className='submitter' style={{
                             width: '160px', height: '166px',
