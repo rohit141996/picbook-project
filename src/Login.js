@@ -6,8 +6,11 @@ const Login = () => {
     const navigate = useNavigate()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [loaderrr, setLoaderrr] = useState('')
 
     const loginn = async () => {
+        setLoaderrr('Loading profile...please wait')
+
         ///////////////////////////////////////// FOR SAVING THE LOGIN INFORMATION IN THE LOCALSTORAGE //
         const result = await fetch('https://picbook-testing-tryone.onrender.com/login', {
             method: 'post',
@@ -38,6 +41,7 @@ const Login = () => {
             navigate('/');
             window.location.reload();
         } else {
+            setLoaderrr('')
             localStorage.clear();
             alert(result2)
         }
@@ -57,7 +61,8 @@ const Login = () => {
                     onChange={(e) => { setPassword(e.target.value) }} 
                     style={{border:'2px black solid', borderRadius:'5px', width:'250px', textAlign:'center', fontSize:'17px', marginBottom:'3px', height:'30px'}}/><br />
                 <button type='submit' onClick={loginn}
-                style={{width:'250px', fontSize:'20px', border:'solid black 2px'}}>Login</button>
+                style={{width:'250px', fontSize:'20px', border:'solid black 2px'}}>Login</button><br/>
+                <h3 style={{color:'white'}}>{loaderrr}</h3>
             </center>
         </>
     )
