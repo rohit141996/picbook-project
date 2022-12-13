@@ -34,7 +34,6 @@ const Createaccount = () => {
                 <h1 style={{ textShadow: '0px 0px 20px black', color: 'white', marginTop: '0px' }}>Create account on</h1>
                 <h1 style={{ textShadow: '0px 0px 20px black', color: 'white', fontSize: '40px' }}
                     onClick={()=>navigate('/')}>PicBook</h1>
-                <p style={{color:'white', marginBottom:'2px', backgroundColor:'black', display:'inline-block'}}>capitalise the first alphabet of your first name and last name</p><br/>
                 <input type="text" name='name' placeholder='enter first & last name'
                     onChange={(e) => { setName(e.target.value) }} 
                     style={{border:'2px black solid', borderRadius:'5px', width:'250px', textAlign:'center', fontSize:'17px', marginBottom:'3px', height:'30px'}}/><br />
