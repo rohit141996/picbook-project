@@ -8,8 +8,11 @@ const Createaccount = () => {
     const [password, setPassword] = useState('')
     const [name, setName] = useState('');
     const [email, setEmail] = useState('')
+    const [loaderrr, setLoaderrr] = useState('')
 
     const createaccount = async () => {
+        setLoaderrr('Creating account. Do not click again. Please wait.')
+
         let result = await fetch('https://picbook-testing-tryone.onrender.com/create_account', {
             method: 'post',
             body: JSON.stringify({ username, password, email, name }),
@@ -24,6 +27,7 @@ const Createaccount = () => {
             navigate('/login')
         }else{
             alert(result2)
+            setLoaderrr('')
         }
     }
 
@@ -48,6 +52,8 @@ const Createaccount = () => {
                     style={{border:'2px black solid', borderRadius:'5px', width:'250px', textAlign:'center', fontSize:'17px', marginBottom:'3px', height:'30px'}}/><br />                
                 <button type='submit' onClick={createaccount}
                     style={{width:'250px', fontSize:'20px', border:'solid black 2px'}}>Create-Account</button>
+                    <br/>
+                    <h3 style={{color:'white'}}>{loaderrr}</h3>
             </center>
         </div>
     )
