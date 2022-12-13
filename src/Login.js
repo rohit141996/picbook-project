@@ -7,10 +7,11 @@ const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [loaderrr, setLoaderrr] = useState('')
+    const [pageLoad, setPageLoad] = useState('')
 
     useEffect(() => {
         navigate('/')
-    }, [localStorage])
+    }, [pageLoad])
     
 
     const loginn = async () => {
@@ -43,6 +44,7 @@ const Login = () => {
         //////////////////////////////////////////////////////
         if ((result1.username)) {
             localStorage.setItem('user', result2);
+            setPageLoad('asd')
         } else {
             setLoaderrr('')
             localStorage.clear();
