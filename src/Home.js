@@ -3,6 +3,33 @@ import { Link } from 'react-router-dom'
 import './App.css';
 
 const Home = () => {
+
+    var asd = document.getElementById('titleee');
+      asd.style.transition = '1000ms';
+      var xyz = ()=>{
+        setInterval(()=>{
+          setTimeout(() => {
+            asd.style.color = 'indigo';
+              setTimeout(() => {
+                asd.style.color = 'blue';
+                  setTimeout(() => {
+                    asd.style.color = 'green'
+                      setTimeout(() => {
+                        asd.style.color= 'yellow'
+                          setTimeout(() => {
+                            asd.style.color = 'orange'
+                              setTimeout(() => {
+                                asd.style.color = 'red'
+                              }, 1000);
+                          }, 1000);
+                      }, 1000);
+                  }, 1000);
+              }, 1000);
+          }, 1000);
+        }, 7000)
+      }
+    asd.style.color = xyz();
+
     useEffect(()=>{
         
     },[])
