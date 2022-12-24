@@ -17,9 +17,10 @@ const Home = () => {
             <center>
                 <h1 style={{ textShadow: '0px 0px 20px black', color: 'white', marginTop: '100px' }}>welcome</h1>
                 <h1 style={{ textShadow: '0px 0px 20px black', color: 'white' }}>to</h1>
-                <h1 style={{ textShadow: '0px 0px 20px black', color: 'white', fontSize: '100px', marginTop: '110px' }}>PicBook</h1>
+                <h1 id='titleee' style={{ textShadow: '0px 0px 20px black', color: 'white', fontSize: '100px', marginTop: '110px' }}>PicBook</h1>
                 <h3 style={{ textShadow: '0px 0px 20px black', color: 'white' }}>...moments pass, MEMORIES stay!</h3>
             </center>
+            
         </div>
 
     )

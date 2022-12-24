@@ -39,5 +39,31 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      var asd = document.getElementById('titleee');
+      asd.style.transition = '1000ms';
+      asd.style.color = ()=>{
+        setInterval(()=>{
+          setTimeout(() => {
+            asd.style.color = 'indigo';
+              setTimeout(() => {
+                asd.style.color = 'blue';
+                  setTimeout(() => {
+                    asd.style.color = 'green'
+                      setTimeout(() => {
+                        asd.style.color= 'yellow'
+                          setTimeout(() => {
+                            asd.style.color = 'orange'
+                              setTimeout(() => {
+                                asd.style.color = 'red'
+                              }, 1000);
+                          }, 1000);
+                      }, 1000);
+                  }, 1000);
+              }, 1000);
+          }, 1000);
+        }, 7000)
+      }
+    </script>
   </body>
 </html>
